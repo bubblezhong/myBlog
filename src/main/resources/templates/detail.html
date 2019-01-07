@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.mf8.biz/ecs-upgrade-windows-server-2019/ -->
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"  xmlns="http://www.w3.org/1999/xhtml" style="transform: none;">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="wap-font-scale" content="no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9, IE=8;IE=7, IE=EDGE, chrome=1" />
+  <title th:text="${title}">小洋葱</title>
+  <style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important}</style>
+  <link rel="stylesheet" id="gruber-markdown-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/gruber_markdown.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="google-code-prettify-css-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/tomorrow-night.min.css" type="text/css" media="all" />
+  <!--<link rel="stylesheet" id="simple-line-icons-upyun-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/simple-line-icons.min.css" type="text/css" media="all" />-->
+  <!--<link rel="stylesheet" id="font-awesome-upyun-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/font-awesome.min.css" type="text/css" media="all" />-->
+  <link rel="stylesheet" id="nicetheme-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/nicetheme-1.1.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="reset-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/reset-1.1.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="style-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/style-1.1.css" type="text/css" media="all" /> 
+  <script src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/hm.js"></script>
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/prettify.js"></script> 
+  <script type="text/javascript">/* <![CDATA[ */ var globals = {"url_theme":"https:\/\/statics.mf8.biz\/wp-content\/themes\/cosy","image_popup":"null","new_comment_position":"asc","single":"0","post_style":"0","home":"1","page":"0"}; /* ]]> */</script>
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/jquery-1.12.4.js"></script> 
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/jquery-migrate.min-1.4.1.js"></script> 
+  
+  <!--<script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?262e63a2ad34e448f2f4b8d7f9da4c39";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
+  <style type="text/css">
+      .container-small {
+          max-width: 1000px;
+      }
+      .container-small {
+          max-width: 850px;
+      }
+      .prev-next-nav {
+        overflow: auto;
+       }
+       
+       .noMarginTop {
+        margin-top: 0 !important;
+      }
+
+.prev-next-nav>div {
+    width: 50%;
+    float: left;
+    padding: 25px 40px;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 780px){
+    body .prev-next-nav>div {
+       width: 100%;
+       padding: 5px 0;  
+    }
+    .hr-short::before{
+       margin: 0;
+    }
+}
+
+.container-small {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: -140px;
+    margin-bottom: 20px;
+    padding: 35px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.prev-link, .next-link {
+    border-top: 1px solid #efefef;
+}
+.prev-link a, .next-link a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #999;
+    /* transition: all .5s ease-in-out; */
+}
+.pn-ico-left, .pn-ico-right {
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    font-size: 18px;
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+    cursor: pointer;
+    /* transition: all .5s ease-in-out; */
+}
+.pn-link-right, .pn-link-left {
+    font-size: 16px;
+    line-height: 25px;
+}
+.pn-ico-right {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+.text-part {
+  width: 80%;
+}
+@media (max-width: 768px) {
+  .text-part {
+    width: 100%;
+  }
+}
+
+ </style>
+ </head>
+ <body class="post-template-default single single-post postid-1006 single-format-standard" style="transform: none;">
+ <!--sidebar-->
+ <section th:replace="head::sidebar" class="mobile-overlay" id="mobile-overlay"></section>
+ <!--//满屏导航-->
+ <header th:replace="head::header"></header>
+  <section class="nt-warp nt-warp-nospace" style="transform: none;">
+   <div class="container" style="transform: none;">
+    <div class="suxing post-cover">
+     <div class="image" th:style="'background-image: url(' + ${cover} + ');'  "></div>
+     <div class="content"> 
+      <span class="categories"><a th:href="${'/category/' + categoryId}" th:text="${categoryName}">教程</a></span>
+      <h1 th:text="${title}">在阿里云ECS上预览安装 Windows Server 2019</h1>
+     </div>
+     <div class="post-data">
+      <span class="u-time" th:text="${createTime}">2018-04-02</span>
+     </div>
+    </div>
+    <div class="row text-part" style="transform: none;margin: 0 auto;">
+     <main class="l-main col-xs-12 col-sm-12 col-md-12">
+      <div class="m-post">
+       <article class="post-content suxing-popup-gallery">
+        <div class="gruber-markdown" th:utext="${content}">
+
+        </div>
+        
+       </article>
+       
+     
+      <!-- <div id="comment_message" style="display:none;"></div>  -->
+      <!-- // <script src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/iDisqus.min.js"></script>  -->
+     </main>
+    </div>
+   </div>
+    <div class="container-small prev-next-nav noMarginTop">
+      <div class="prev-link">
+        <a th:if="${prev.articleId gt -1}" href="#" th:href="${'/article/'+prev.articleId}">
+          <span class="pn-ico-left">&lt;</span>
+          <span  th:text="${'上一篇：' + prev.title}" class="pn-link-left">上一篇：linux 系统下通过 scp 命令上传文件或者文件夹到服务器</span>
+        </a>
+      </div>
+      <div class="next-link">
+        <a th:if="${next.articleId gt -1}" th:href="${'/article/'+next.articleId}">
+          <span th:text="${'下一篇：' + next.title}" class="pn-link-right">下一篇：sublime text 装了 Anaconda 后出现白色框框的解决办法</span>
+          <span class="pn-ico-right">&gt;</span>
+        </a>
+      </div>
+    </div>
+  </section> 
+  <!--<script type="text/javascript">var pre = document.getElementsByTagName('pre');-->
+				<!--for (var i=0;i<pre.length;i++)-->
+				<!--{-->
+					<!--pre[i].className = "prettyprint";-->
+				<!--}-->
+				<!--// var b = document.getElementsByTagName('body');-->
+				<!--// b.onload="prettyPrint()";-->
+				<!--prettyPrint();</script> -->
+ 
+  <footer id="footer-main" class="footer-main footer-2 ">
+   <div class="container">
+    <div class="footer-bottom">
+     <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 footer-copyright">
+       <p></p>
+       <p>Copyright &copy; 2011-2018 小白菜. 备案： <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">浙ICP备15006212号-1</a></p>
+       <p></p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/plugins.min-1.1.js"></script> 
+  <!--<script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/lazysizes.min-1.1.js"></script> -->
+  <!--<script>(function(w, d){-->
+	<!--var b = d.getElementsByTagName("body")[0];-->
+	<!--var s = d.createElement("script"); s.async = true;-->
+	<!--var v = !("IntersectionObserver" in w) ? "8.5.2" : "10.3.5";-->
+	<!--s.src = "https://statics.mf8.biz/wp-content/plugins/wp-rocket/inc/front/js/lazyload-" + v + ".min.js";-->
+	<!--w.lazyLoadOptions = {-->
+		<!--elements_selector: "img, iframe",-->
+		<!--data_src: "lazy-src",-->
+		<!--data_srcset: "lazy-srcset",-->
+		<!--skip_invisible: false,-->
+		<!--class_loading: "lazyloading",-->
+		<!--class_loaded: "lazyloaded",-->
+		<!--threshold: 300,-->
+		<!--callback_load: function(element) {-->
+			<!--if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {-->
+				<!--if (element.classList.contains("lazyloaded") ) {-->
+					<!--if (typeof window.jQuery != "undefined") {-->
+						<!--if (jQuery.fn.fitVids) {-->
+							<!--jQuery(element).parent().fitVids();-->
+						<!--}-->
+					<!--}-->
+				<!--}-->
+			<!--}-->
+		<!--}-->
+	<!--}; // Your options here. See "recipes" for more information about async.-->
+	<!--b.appendChild(s);-->
+<!--}(window, document));-->
+
+<!--// Listen to the Initialized event-->
+<!--window.addEventListener('LazyLoad::Initialized', function (e) {-->
+    <!--// Get the instance and puts it in the lazyLoadInstance variable-->
+	<!--var lazyLoadInstance = e.detail.instance;-->
+
+	<!--var observer = new MutationObserver(function(mutations) {-->
+		<!--mutations.forEach(function(mutation) {-->
+			<!--lazyLoadInstance.update();-->
+		<!--} );-->
+	<!--} );-->
+	<!---->
+	<!--var b      = document.getElementsByTagName("body")[0];-->
+	<!--var config = { childList: true, subtree: true };-->
+	<!---->
+	<!--observer.observe(b, config);-->
+<!--}, false);</script>-->
+  <!--<script async="" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/lazyload-10.3.5.min.js"></script> -->
+  <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1522992533 -->
+   <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/nicetheme-1.1.js"></script> 
+ 
+ </body>
+</html>

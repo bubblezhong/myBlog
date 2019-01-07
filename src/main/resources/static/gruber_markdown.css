@@ -1,0 +1,193 @@
+.gruber-markdown h1{
+	color:#000000;
+	font-family:"Microsoft Yahei Light";
+	font-style:normal;
+	font-weight:bold;
+	font-size:28px;
+	line-height:150%;
+	margin-top:28px; margin-bottom:19.6px;
+	padding-top:0px; padding-bottom:0px;
+}
+
+.gruber-markdown h2{
+	color:#000000;
+	font-family:"Microsoft Yahei Light";
+	font-style:normal;
+	font-weight:bold;
+	font-size:24px;
+	border-bottom:1px solid #bbbbbb;
+	padding-top:0px; padding-bottom:6px;
+	margin-top:24px; margin-bottom:16.8px;
+}
+
+.gruber-markdown h3{
+	color:#000000;
+	font-family:"Microsoft Yahei Light";
+	font-style:normal;
+	font-weight:bold;
+	font-size:20px;
+	line-height:150%;
+	margin-top:20px; margin-bottom:14px;
+	padding-top:0px; padding-bottom:0px;
+}
+
+.gruber-markdown h4{
+	color:#000000;
+	font-family:"Microsoft Yahei Light";
+	font-style:normal;
+	font-weight:bold;
+	font-size:18.4px;
+	line-height:150%;
+	margin-top:18.4px; margin-bottom:12.88px;
+	padding-top:0px; padding-bottom:0px;
+}
+
+.gruber-markdown h5{
+	color:#000000;
+	font-family:"Microsoft Yahei Light";
+	font-style:normal;
+	font-weight:bold;
+	font-size:16.56px;
+	line-height:150%;
+	margin-top:16.56px; margin-bottom:11.592px;
+	padding-top:0px; padding-bottom:0px;
+}
+
+.gruber-markdown h6{
+	color:#000000;
+	font-family:"Microsoft Yahei Light";
+	font-style:normal;
+	font-weight:bold;
+	font-size:15.36px;
+	line-height:150%;
+	margin-top:15.36px; margin-bottom:10.752px;
+	padding-top:0px; padding-bottom:0px;
+}
+
+.gruber-markdown p{
+	color:#303030;
+	font-family:"Microsoft Yahei";
+	font-style:normal;
+	font-weight:normal;
+	font-size:15.36px;
+	letter-spacing:0px;
+	line-height:150%;
+	text-indent:0px;
+}
+
+.gruber-markdown blockquote p{
+	color:#707070;
+	font-family:"Microsoft Yahei";
+	font-style:normal;
+	font-weight:normal;
+	font-size:14.48px;
+	letter-spacing:0px;
+	line-height:150%;
+	text-indent:0px;
+}
+
+.gruber-markdown p code{
+	font-family:"Microsoft Yahei"!important;
+	font-style:normal!important;
+	font-weight:normal!important;
+	font-size:15.36px!important;
+	letter-spacing:0px!important;
+	line-height:150%!important;
+	padding-left:6.144px!important; 
+	padding-right:6.144px!important; 
+	padding-top:1.536px!important; 
+	padding-bottom:1.536px!important;
+	-webkit-border-radius:4px!important;
+	border-radius:4px!important;
+	text-indent:0px!important;
+}
+
+.gruber-markdown pre{
+	padding:14.7456px!important;
+	border:2px solid #E4E2E2!important;
+	-webkit-border-radius:5px!important;
+	border-radius:5px!important;
+	text-indent:0px!important;
+	white-space: pre-wrap!important;
+}
+
+.gruber-markdown pre code{
+
+	font-style:normal!important;
+	font-weight:normal!important;
+	font-size:15.36px!important;
+	letter-spacing:0px!important;
+	line-height:150%!important;
+	text-indent:0px!important;
+}
+
+.gruber-markdown table{
+	width:100%;
+	font-family:"Microsoft Yahei";
+	font-style:normal;
+	font-weight:normal;
+	font-size:15.36px;
+	color:#777777;
+	border-width:1px;
+	border-color:#E6E6E6;
+	border-collapse:collapse;
+	text-indent:0px;
+}
+
+.gruber-markdown th{
+	font-family:"Microsoft Yahei";
+	font-size:15.36px;
+	font-weight:bold;
+	border-width:1px;
+	padding:9.216px;
+	border-style:solid;
+	border-color:#E6E6E6;
+	text-indent:0px;
+}
+
+.gruber-markdown td{
+	font-family:"Microsoft Yahei";
+	font-size:15.36px;
+	border-width:1px;
+	padding:9.216px;
+	border-style:solid;
+	border-color:#E6E6E6;
+	text-indent:0px;
+}
+
+.gruber-markdown blockquote{
+	border-left:4px solid #D0D0D0;
+	margin:0px 0px;
+	padding:0px 14.48px;
+}
+
+.gruber-markdown a{
+	color:#1790A2;
+	font-family:"Microsoft Yahei";
+	font-weight:normal;
+}
+
+.gruber-markdown li{
+	color:#2B2A27;
+	font-family:"Microsoft Yahei";
+	font-style:normal;
+	font-weight:normal;
+	font-size:15.36px;
+	letter-spacing:0px;
+	line-height:150%;
+	list-style-type:disc;
+	text-indent:0px;
+}
+
+.gruber-markdown ul{
+	margin-top:10.752px; margin-bottom:10.752px;
+}
+
+.gruber-markdown p img{
+	display:block; 
+	margin:0 auto;
+}
+
+.gruber-markdown em{
+	margin-left: -2px; margin-right: 2px;
+}

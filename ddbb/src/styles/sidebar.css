@@ -1,0 +1,140 @@
+.header-fixed {
+	height: 55px;
+	display: none;
+}
+.menu-icon {
+	position: relative;
+	z-index: 9999999;
+  transition: all 0.4s ease-in;
+}
+.sidebar-box {
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+  transition: all 0.2s ease-in;
+  z-index: 99999;
+}
+.sidebar-content {
+	position: relative;
+	top: 50%;
+	margin-top: -216px;
+}
+.toggle-off {
+	position: relative;
+	right: 20px;
+	font-size: 22px;
+	color: #fff;
+	line-height: 200%;
+	text-align: right;
+}
+.avartar {
+	/*margin-top: 20%;*/
+}
+.avartar img {
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.slogan {
+	/*margin-top: 2%;*/
+/*	position: relative;
+	top: 10%;*/
+}
+.slogan h3 {
+	font-size: 28px;
+	color: #fff;
+	font-weight: 500;
+}
+.slogan h4 {
+	font-size: 16px;
+	color: #fff;
+	font-weight: 500;
+}
+.time-line {
+	padding: 0 10% 0 0;
+}
+.menu {
+	position: relative;
+	z-index: 999;
+	margin-top: 5%;
+	font-size: 18px;
+	line-height: 256%;
+	color: #fff;
+}
+.menu a {
+	color: #f5f7fa;
+}
+.menu .active {
+	color: #fff;
+	font-style: italic;
+	font-weight: bold;
+}
+.menu a:hover span:first-child{
+	display: none;
+}
+.menu a:hover span:last-child{
+	display: inline-block;
+}
+.menu span:first-child {
+	display: inline-block;
+}
+.menu span:last-child {
+	display: none;
+}
+.menu .active span:first-child {
+	display: none;
+}
+.menu .active span:last-child {
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	font-size: 24px;
+	margin-right: -5px;
+}
+.menu-active {
+	/*text-indent: 10px;*/
+}
+
+
+@media screen and (max-width: 500px) {
+	.header-fixed {
+		display: block;
+    border: 1px solid #eef2f8;
+    color: #88909a;
+    background: #fff;
+    line-height: 55px;
+    font-size: 18px;
+    padding: 0 5%;
+    z-index: 20;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+	}
+	.logo {
+		position: absolute;
+		top: 0px;
+		width: 90%;
+		font-weight: bold;
+		text-align: center;
+	}
+	.sidebar-box {
+		left: -100%;
+		width: 100%;	}
+	.time-line {
+		padding: 0 1%;
+	}
+	.slogan {
+		position: relative;
+	}
+	.content-box {
+		padding-left: 0;
+		margin-left: 0;
+	  transition: all 0.2s ease-in;
+	}
+	.article-list li {
+		padding: 2%;
+	  text-align: center;
+		transition: all 0.2s ease-in;
+	}
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.newx.blog.dao.TagMapper" >
+    <select id="selectAll" resultType="hashmap">
+        SELECT * FROM tags
+    </select>
+    <select id="getArticleTag" parameterType="integer" resultType="hashmap">
+        SELECT tagName, tags.tagId
+        FROM articletagrelations, tags, articles
+        WHERE articles.articleId=#{articleId}
+        AND articletagrelations.articleId = articles.articleId
+        AND articletagrelations.tagId = tags.tagId
+    </select>
+    <insert id="createTag" parameterType="string">
+        INSERT INTO tags (tagName)
+        VALUES (#{tagName})
+    </insert>
+    <select id="getArticlesByTag" parameterType="integer" resultType="hashmap">
+        SELECT articles.articleId, articles.title as title, articles.createTime as time,
+                categories.categoryName as category, categories.categoryId, cover, viewNum, tagName
+        FROM articletagrelations, tags, articles, categories
+        WHERE articles.articleId = articletagrelations.articleId
+        AND articletagrelations.tagId = tags.tagId
+        AND categories.categoryId = articles.categoryId
+        AND tags.tagId = #{tadId}
+    </select>
+    <select id="getTag1" resultType="hashmap">
+        SELECT tagId, tagName
+        FROM tags
+        WHERE tagId = 1
+    </select>
+</mapper>

@@ -1,0 +1,121 @@
+
+
+
+
+<!--满屏导航-->
+<header th:fragment="header" class="nt-header navbar mobile-style02">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/" title="小洋葱" style="background-image: url('https://zxx-blog.oss-cn-shanghai.aliyuncs.com/images/1523629498354onion.jpg?Expires=1838989498&OSSAccessKeyId=LTAIw9QfPaWovM1p&Signature=zIWjzcsmsKmW3kKZBnYj%2BxRnPGA%3D');">小洋葱</a>
+            <a class="navbar-brand mobile-navbar-brand hidden-md hidden-lg" style="background: url(https://zxx-blog.oss-cn-shanghai.aliyuncs.com/images/1523629498354onion.jpg?Expires=1838989498&OSSAccessKeyId=LTAIw9QfPaWovM1p&Signature=zIWjzcsmsKmW3kKZBnYj%2BxRnPGA%3D);    border-radius: 50%; background-size: 70px;
+    background-position: -15px;" href="/" title="小洋葱" >小洋葱</a>
+        </div>
+        <div class="navbar-collapse hidden-xs hidden-sm">
+            <ul class="navbar-nav">
+                <li id="homepage1"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1011"><a href="/">首页</a></li>
+                <li id="deeplearning1" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/20">深度学习</a>
+                </li>
+                <li id="machinelearning1" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/22">机器学习</a>
+                </li>
+                <li id="fe1" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/27">Web前端</a>
+                </li>
+                <li id="back1" class="menu-item menu-item-type-taxonomy menu-item-object-category"></span><a href="/category/26">Web后端</a>
+                </li>
+                <li id="linux1" class="menu-item menu-item-type-taxonomy menu-item-object-category "></span><a href="/category/28">Linux</a>
+                </li>
+                <li id="algorithm1" class="menu-item menu-item-type-taxonomy menu-item-object-category "></span><a href="/category/21">算法</a>
+                </li>
+                <li id="about1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="/about">关于</a></li>
+            </ul>
+        </div>
+        <div class="mobile-navbar row hidden-md hidden-lg">
+            <ul class="navbar-nav">
+                <li id="homepage2"  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1011"><a href="/">首页</a></li>
+                <li id="deeplearning" class="menu-item menu-item-type-taxonomy menu-item-object-category "><a href="/category/20">深度学习</a></li>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/22">机器学习</a></li>
+                <li class="menu-item menu-item-type
+                -taxonomy menu-item-object-category"><a href="/category/27">Web前端</a></li>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/26">Web后端</a></li>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/28">Linux</a></li>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category "></span><a href="/category/21">算法</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="/about">关于</a></li>
+            </ul>
+            <button type="button" class="navbar-toggle mobile-navbar-toggle" id="mobile-menu-icon"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+    </div>
+    <script th:inline="javascript">
+      var tempId = [[${categoryId}]];
+      var homepage1 = document.getElementById('homepage1');
+      var homepage1Class = homepage1.getAttribute("class");
+      var deeplearning1 = document.getElementById("deeplearning1");
+      var deeplearnig1Class = deeplearning1.getAttribute("class");
+      var machinelearning1 = document.getElementById("machinelearning1");
+      var machinelearning1Class = machinelearning1.getAttribute("class");
+      var fe1 = document.getElementById("fe1");
+      var fe1Class = fe1.getAttribute("class");
+      var back1 = document.getElementById("back1");
+      var back1Class = back1.getAttribute("class");
+      var algorithm1 = document.getElementById("algorithm1");
+      var algorithm1Class = algorithm1.getAttribute("class");
+      var linux1 = document.getElementById("linux1");
+      var linux1Class = linux1.getAttribute("class");
+      var about1 = document.getElementById("about1");
+      var about1Class = about1.getAttribute("class");
+      switch(tempId){
+          case -1:
+              homepage1.setAttribute("class", homepage1Class + " current-menu-item current_page_item");
+            break;
+          case 20:
+            deeplearning1.setAttribute("class", deeplearnig1Class + " current-menu-item current_page_item");
+            break;
+          case 22:
+            machinelearning1.setAttribute("class", machinelearning1Class + " current-menu-item current_page_item");
+            break;
+          case 27:
+            fe1.setAttribute("class", fe1Class + " current-menu-item current_page_item");
+            break;
+          case 26:
+              back1.setAttribute("class", back1Class + " current-menu-item current_page_item");
+            break;
+           case 21:
+               algorithm1.setAttribute("class", algorithm1Class + " current-menu-item current_page_item");
+            break;
+           case 28:
+            linux1.setAttribute("class", linux1Class + " current-menu-item current_page_item");
+            break;
+            default:
+                about1.setAttribute("class", about1Class + " current-menu-item current_page_item");
+
+      }
+ </script>
+</header>
+<!--sidebar-->
+<section th:fragment="sidebar" class="mobile-overlay" id="mobile-overlay">
+    <nav class="mobile-navigation mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" style="overflow: visible;">
+        <div id="mCSB_1" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+            <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                <ul id="menu-main-menu" class="cosy-mobile-menu clearfix" style="text-align: center;    margin-top: 50px;">
+                    <li id="menu-item-1011" id="homepage3" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1011"><a href="/">首页</a></li>
+                    <li id="menu-item-1015" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1015"><a href="/category/20">深度学习</a>
+                    </li>
+                    <li id="menu-item-1020" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1020"><a href="/category/22">机器学习</a>
+                    </li>
+                    <li id="menu-item-1028" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1028"><a href="/category/27">Web前端</a>
+                    </li>
+                    <li id="menu-item-1034" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1034"><a href="/category/26">Web后端</a>
+                    </li>
+                    <li id="menu-item-1032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="/category/28">Linux</a>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category "></span><a href="/category/21">算法</a>
+                    </li>
+                    <li id="menu-item-1038" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1038"><a href="/about">关于</a></li>
+                </ul>
+            </div>
+        </div>
+       
+    </nav>
+    <button id="mobile-close-icon" style="position: fixed; width: 30px; height: 30px;display: block;right: 10px;top: 10px;padding: 0;border: 0;background: transparent;">
+        <img src="https://zxx-blog.oss-cn-shanghai.aliyuncs.com/images/1523673005823eglass-close%20%281%29.png?Expires=1839033004&OSSAccessKeyId=LTAIw9QfPaWovM1p&Signature=LhXoOpH3fFJdw%2BHCGziH5iKLE6g%3D" alt="关闭">
+    </button>
+</section>

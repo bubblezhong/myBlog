@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.newx.blog.dao.ArticleMapper">
+    <select id="selectAll" resultType="hashmap">
+        SELECT articleId, title, descr, cover, content, viewNum, DATE_FORMAT(createTime,'%Y-%m-%d') as createTime, categories.categoryId, categoryName
+        FROM articles, categories
+        WHERE articles.categoryId = categories.categoryId
+        ORDER BY createTime DESC
+    </select>
+    <select id="getArticle" parameterType="int" resultType="hashmap">
+        SELECT
+            articleId,
+            title,
+            descr,
+            cover,
+            viewNum,
+            content,
+            DATE_FORMAT(createTime, '%Y-%m-%d') AS createTime,
+            categories.categoryId,
+            categoryName
+        FROM
+            articles,
+            categories
+        WHERE
+            articleId = #{articleID}
+        AND articles.categoryId = categories.categoryId
+    </select>
+    <insert id="createArticle" parameterType="com.newx.blog.entity.ArticleEntity"
+            useGeneratedKeys="true" keyProperty="articleId">
+        INSERT INTO articles (title, descr, content, categoryId, createTime, cover, updateTime)
+        VALUES (#{title},#{descr}, #{content, jdbcType=VARCHAR}, #{categoryId}, #{createTime}, #{cover}, #{updateTime})
+    </insert>
+    <select id="getArchive" resultType="hashmap">
+        SELECT articleId, title, DATE_FORMAT(createTime,'%Y-%m-%d') as time,
+               categories.categoryId, categoryName as category
+        FROM articles, categories
+        WHERE articles.categoryId = categories.categoryId
+        ORDER BY time DESC
+    </select>
+    <update id="updateViewNum" parameterType="integer">
+        UPDATE articles
+        SET viewNum = viewNum + 1
+        WHERE
+            articleId = #{articleID}
+    </update>
+
+    <select id="getPrev" parameterType="integer" resultType="hashmap">
+        SELECT
+            title,
+            articleId
+        FROM
+            articles
+        WHERE
+            createTime &gt; (
+                SELECT
+                    createTime
+                FROM
+                    articles
+                WHERE
+                    articleId = #{articleId}
+            )
+        ORDER BY
+            createTime ASC
+        LIMIT 0,1
+    </select>
+    <select id="getNext" parameterType="integer" resultType="hashmap">
+        SELECT
+            title,
+            articleId
+        FROM
+            articles
+        WHERE
+            createTime &lt; (
+                SELECT
+                    createTime
+                FROM
+                    articles
+                WHERE
+                    articleId = #{articleId}
+            )
+        ORDER BY
+            createTime DESC
+        LIMIT 0,1
+    </select>
+</mapper>

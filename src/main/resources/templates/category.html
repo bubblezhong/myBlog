@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://www.mf8.biz/category/ganhuo/ -->
+<html xmlns:th="http://www.thymeleaf.org"  xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="wap-font-scale" content="no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9, IE=8;IE=7, IE=EDGE, chrome=1" />
+  <title>小洋葱</title>
+  <style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important}</style>
+  <link rel="stylesheet" id="gruber-markdown-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/gruber_markdown.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="google-code-prettify-css-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/tomorrow-night.min.css" type="text/css" media="all" />
+  <!--<link rel="stylesheet" id="simple-line-icons-upyun-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/simple-line-icons.min.css" type="text/css" media="all" />-->
+  <link rel="stylesheet" id="nicetheme-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/nicetheme-1.1.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="reset-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/reset-1.1.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="style-css" href="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/style-1.1.css" type="text/css" media="all" /> 
+  <script src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/hm.js"></script>
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/prettify.js"></script> 
+  <script type="text/javascript">/* <![CDATA[ */ var globals = {"url_theme":"https:\/\/statics.mf8.biz\/wp-content\/themes\/cosy","image_popup":"null","new_comment_position":"asc","single":"0","post_style":"0","home":"1","page":"0"}; /* ]]> */</script>
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/jquery-1.12.4.js"></script> 
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/jquery-migrate.min-1.4.1.js"></script> 
+  
+  <!--<script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?262e63a2ad34e448f2f4b8d7f9da4c39";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script>-->
+
+
+  <style type="text/css">
+   .page-nav {
+    padding: 15px;
+    text-align: center;
+   }
+   .nav-links {
+    font-size: 16px;
+    color: #999;
+    line-height: 25px;
+   }
+   .nav-links a {
+    font-size: 16px;
+    color: #999;
+   }
+   .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   }
+
+  </style>
+ </head>
+ <body class="archive category category-ganhuo category-4">
+ <!--sidebar-->
+ <section th:replace="head::sidebar" class="mobile-overlay" id="mobile-overlay"></section>
+ <!--//满屏导航-->
+ <header th:replace="head::header"></header>
+  <section class="nt-warp nt-warp-full ">
+   <div class="container">
+    <div class="introduction">
+      <h5 th:text="${categoryName}"><i class="icon icon-notebook"></i> 好物推荐</h5>
+     </div>
+    <main class="l-main">
+     <div class="m-post-list row d-archive">
+      <div th:each="article:${articleList}" class="col-grid col-xs-12 col-sm-4 col-md-4">
+       <article class="post post-grid">
+        <div class="image pull-left"> 
+         <a  th:href="${'/article/' + article.articleId}" > <img th:src="${article.cover}"  /> </a>
+        </div>
+        <div class="content">
+         <div class="meta">
+          <span class="u-categories"><a th:href="${'/category/' + article.categoryId}" th:text="${article.categoryName}" >好物推荐</a></span>
+         </div>
+         <div class="title">
+          <h2><a  th:text="${article.title}" th:href="${'/article/' + article.articleId}">最低 128 元搞定新一代 iPhone 快充（头+线）！</a></h2>
+         </div>
+         <!--<div class="desc hidden-xs">-->
+          <!--<p>前言 自 iPad Pro 开始，苹果开始支持了快速充电，在2017年的秋季 ...</p>-->
+         <!--</div>-->
+         <div class="data clearfix">
+          <span class="u-time" th:text="${article.createTime}">2018-02-21</span>
+          <span class="u-view hidden-xs" th:text="${article.viewNum} + '次查看'"></span>
+         </div>
+        </div>
+       </article>
+      </div>
+     </div>
+   <!--   <div class="m-ajax-load">
+      <div class="post-loading" style="display: none;">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+      </div> 
+      <button data-page="cat" data-query="4" data-action="ajax_load_posts" data-paged="2" data-append="d-archive" class="btn btn-primary dm-ajax-load" style="display: inline-block;">加载更多</button>
+     </div> -->
+    </main>
+   </div>
+   <div class="page-nav">
+    <div class="nav-links">
+     <a th:if="${prevPage > 0}" th:href="${'/?pageNum=' + prevPage}">上一页 &nbsp;&lt;</a>
+     <span th:text="${pageNum + '/' + pages}" class="page-number" style="margin: 0 15px;">1/2</span>
+     <a th:if="${nextPage > 0}" th:href="${'/?pageNum=' + nextNum}">下一页 &nbsp;&gt;</a>
+    </div>
+   </div>
+  </section> 
+  <script type="text/javascript">var pre = document.getElementsByTagName('pre');
+				for (var i=0;i<pre.length;i++)
+				{
+					pre[i].className = "prettyprint";
+				}
+				// var b = document.getElementsByTagName('body');
+				// b.onload="prettyPrint()";
+				prettyPrint();</script> 
+  <script src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/iDisqus.min.js"></script> 
+ <!--  <script>var disq = new iDisqus('comment', {
+    forum: 'mifanba',
+    api: 'https://www.mf8.biz/disqus/api/',
+    site: 'https://www.mf8.biz',
+    mode: 1,
+    timeout: 3000,
+    badge:"博主",
+    init: true
+});</script>  -->
+  <footer id="footer-main" class="footer-main footer-2 ">
+   <div class="container">
+    <div class="footer-bottom">
+     <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 footer-copyright">
+       <p></p>
+       <p>Copyright &copy; 2011-2018 小白菜. 备案： <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">浙ICP备15006212号-1</a></p>
+       <p></p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer><!-- 
+  <div class="scroll-to-top floating-button hidden-sm hidden-xs">
+   <a href="https://www.mf8.biz/category/ganhuo/#"><i class="fa fa-angle-up"></i></a>
+  </div>  -->
+  <!-- // <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/plugins.min-1.1.js"></script>  -->
+  <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/nicetheme-1.1.js"></script> 
+   <!-- // <script type="text/javascript" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/lazysizes.min-1.1.js"></script>  -->
+  <!-- // <script>(function(w, d){ -->
+<!-- // 	var b = d.getElementsByTagName("body")[0];
+// 	var s = d.createElement("script"); s.async = true;
+// 	var v = !("IntersectionObserver" in w) ? "8.5.2" : "10.3.5";
+// 	s.src = "https://statics.mf8.biz/wp-content/plugins/wp-rocket/inc/front/js/lazyload-" + v + ".min.js";
+// 	w.lazyLoadOptions = {
+// 		elements_selector: "img, iframe",
+// 		data_src: "lazy-src",
+// 		data_srcset: "lazy-srcset",
+// 		skip_invisible: false,
+// 		class_loading: "lazyloading",
+// 		class_loaded: "lazyloaded",
+// 		threshold: 300,
+// 		callback_load: function(element) {
+// 			if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+// 				if (element.classList.contains("lazyloaded") ) {
+// 					if (typeof window.jQuery != "undefined") {
+// 						if (jQuery.fn.fitVids) {
+// 							jQuery(element).parent().fitVids();
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}; // Your options here. See "recipes" for more information about async.
+// 	b.appendChild(s);
+// }(window, document));
+
+// // Listen to the Initialized event
+// window.addEventListener('LazyLoad::Initialized', function (e) {
+//     // Get the instance and puts it in the lazyLoadInstance variable
+// 	var lazyLoadInstance = e.detail.instance;
+
+// 	var observer = new MutationObserver(function(mutations) {
+// 		mutations.forEach(function(mutation) {
+// 			lazyLoadInstance.update();
+// 		} );
+// 	} );
+	
+// 	var b      = document.getElementsByTagName("body")[0];
+// 	var config = { childList: true, subtree: true };
+	
+// 	observer.observe(b, config);
+// }, false);</script>
+
+//   <script async="" src="https://ddbb-blog.oss-cn-shanghai.aliyuncs.com/static/lazyload-10.3.5.min.js"></script>  -->
+  <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1522989815 -->
+ </body>
+</html>

@@ -1,0 +1,143 @@
+
+.main-content-wrap {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding:20px 45px 0 45px;
+	overflow: auto;
+}
+.markdown-body {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 15px 45px;
+}
+.new-article .form-item {
+	padding: 10px 0;
+	line-height: 256%;
+	font-size: 16px;
+}
+.title, .rc-select-selection {
+  font-size: 16px;
+  vertical-align: middle;
+  width: 100%;
+  padding: 10px 12px;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  border: none;
+  outline: none;
+  border: 1px solid #b8c4ce;
+  box-sizing: border-box;
+}
+.rc-select-selection {
+	padding: 5px 6px;
+	border-radius: 0;
+	line-height: auto;
+}
+.category-select {
+	width: 100%;
+	height: 40px;
+}
+.category-select .rc-select-selection {
+	height: 100%;
+}
+.category-select .rc-select-selection__clear{
+	margin-top: 8px;
+}
+.category-select  .rc-select-arrow {
+	margin-top: 6px;
+}
+.ql-editor {
+	min-height: 400px;
+}
+.ql-toolbar.ql-snow {
+	border-bottom: none;
+}
+.main-content-wrap .confirm-btn {
+	padding: 5px 20px;
+	margin-top: -20px;
+	float: right;
+	font-size: 16px;
+	border-color: #369;
+	background: #369;
+}
+.crop .rodal {
+	overflow-y: scroll;
+}
+body .ReactCrop__image-copy {
+}
+body .corp-box {
+	text-align: center;
+}
+body .corp-box img {
+	margin: 0 auto;
+}
+body .corp-box .ReactCrop {
+}
+.crop .rodal-dialog{
+	width: 800px !important;
+  height: fit-content!important;
+	padding: 40px;
+	padding-bottom: 0px;
+	z-index: 100001;
+}
+.crop .rodal {
+	z-index: 100000;
+}
+.crop .rodal-mask {
+	z-index: 100000;
+}
+.model-footer {	
+  display: inline-block;
+  float: right;
+	text-align: right;
+
+}
+.preview {
+	display: block;
+  max-width: 98%;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+.model-footer .btn {
+	margin: 10px;
+}
+body .ql-snow .ql-editor pre.ql-syntax {
+  background-color: #f6f8fa;
+}
+body .ql-snow .ql-editor pre.ql-syntax {
+	color: #333;
+}
+
+
+
+
+@media (max-width: 500px) {
+	.main-content-wrap, .markdown-body {
+		padding: 15px;
+	}
+
+	body .corp-box {
+	/*	width: 100%;
+		max-width: 100%;*/
+		text-align: center;
+	}
+	body .corp-box img {
+		margin: 0 auto;
+	}
+	body .corp-box .ReactCrop {
+		height: auto;
+	}
+	.crop .rodal-dialog{
+		width: 300px !important;
+		padding: 40px 10px;
+		padding-bottom: 0px;
+	}
+	.model-footer {	
+	  display: inline-block;
+	  float: right;
+		text-align: right;
+	}
+}
